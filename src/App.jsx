@@ -53,8 +53,8 @@ const App = () => {
                 <button 
                     type="button" 
                     onclick="agregarFuncion()"
-                    className="btn btn-success w-100">
-                    Agregar</button>
+                    className="btn btn-primary w-100">
+                    Publicar</button>
             </div>
         </div>
       </div>
