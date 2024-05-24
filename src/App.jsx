@@ -1,7 +1,15 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import React, { useState } from 'react';
+
+
 
 const App = () => {
+
+  const [nombre, setNombre] = useState("")
+  const [email, setEmail] = useState("")
+  const [comentarios, setComentarios] = useState("")
+
   return (
     <>
       <Navbar />
