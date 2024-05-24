@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from './components/Navbar';
 import React, { useState } from 'react';
 
@@ -10,9 +9,14 @@ const App = () => {
   const [email, setEmail] = useState("")
   const [comentarios, setComentarios] = useState("")
 
-  const handleChange = (event) => {
-    setTextarea(event.target.value)
-  }
+  const send = () => {
+    const formData = {
+      nombre,
+      email,
+      comentarios
+    };
+    console.log(formData);
+  };
 
   return (
     <>
@@ -25,9 +29,9 @@ const App = () => {
               <label htmlFor="nombre" className="form-label">
                 Nombre
               </label>
-              <input 
-                type="text" 
-                className="form-control" 
+              <input
+                type="text"
+                className="form-control"
                 id="nombre"
                 onChange={(e) => setNombre(e.target.value)}
                 placeholder="Ingresa tu nombre"
@@ -39,9 +43,9 @@ const App = () => {
               <label htmlFor="email" className="form-label">
                 Email
               </label>
-              <input 
-                type="email" 
-                className="form-control" 
+              <input
+                type="email"
+                className="form-control"
                 id="email"
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Ingresa tu correo"
@@ -50,31 +54,33 @@ const App = () => {
           </div>
           <div className="col-8">
             <div className="mb-3">
-              <label htmlFor="comentarios" className="form-label">
+              <label
+                htmlFor="comentarios"
+                className="form-label">
                 Comentarios
               </label>
               <textarea
                 className="form-control"
                 id="comentarios"
                 rows="4"
-                onChange={handleChange}
-                placeholder="Escribe tus comentarios aquí"
+                onChange={(e) => setComentarios(e.target.value)}
               ></textarea>
             </div>
           </div>
         </div>
         <div className="row justify-content-center">
-            <div className="col-5">
-                <button 
-                    type="button" 
-                    onclick="agregarFuncion()"
-                    className="btn btn-primary w-100">
-                    Publicar</button>
-            </div>
+          <div className="col-5">
+            <button
+              type="button"
+              className="btn btn-primary w-100"
+              onClick={send}>
+              Publicar
+            </button>
+          </div>
         </div>
       </div>
-      
-      
+
+
     </>
   );
 };
