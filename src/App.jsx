@@ -10,6 +10,10 @@ const App = () => {
   const [email, setEmail] = useState("")
   const [comentarios, setComentarios] = useState("")
 
+  const handleChange = (event) => {
+    setTextarea(event.target.value)
+  }
+
   return (
     <>
       <Navbar />
@@ -25,6 +29,7 @@ const App = () => {
                 type="text" 
                 className="form-control" 
                 id="nombre"
+                onChange={(e) => setNombre(e.target.value)}
                 placeholder="Ingresa tu nombre"
               />
             </div>
@@ -38,6 +43,7 @@ const App = () => {
                 type="email" 
                 className="form-control" 
                 id="email"
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Ingresa tu correo"
               />
             </div>
@@ -51,6 +57,7 @@ const App = () => {
                 className="form-control"
                 id="comentarios"
                 rows="4"
+                onChange={handleChange}
                 placeholder="Escribe tus comentarios aquí"
               ></textarea>
             </div>
