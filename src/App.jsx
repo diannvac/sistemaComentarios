@@ -11,12 +11,17 @@ const App = () => {
 
   const send = () => {
     const formData = {
-      nombre,
-      email,
-      comentarios
+      nombre: nombre,
+      email: email,
+      comentarios:comentarios
     };
-    console.log(formData);
+    console.log(formData)
+    limpiarForm();
   };
+
+  const limpiarForm = () => {
+    document.getElementById("Coment").reset();
+  }
 
   return (
     <>
@@ -24,6 +29,9 @@ const App = () => {
       <div className="container mt-3">
         <div className="row justify-content-center">
           <h2 className="text-center">Formulario</h2>
+          
+          <form action="" id='Coment'>
+          <div className="row justify-content-center">
           <div className="col-4">
             <div className="mb-3">
               <label htmlFor="nombre" className="form-label">
@@ -67,6 +75,8 @@ const App = () => {
               ></textarea>
             </div>
           </div>
+          </div>
+          </form>
         </div>
         <div className="row justify-content-center">
           <div className="col-5">
