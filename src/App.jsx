@@ -11,12 +11,12 @@ const App = () => {
   const [comentarios, setComentarios] = useState("")
 // función para enviar los datos con el botón 
   const send = () => {
-    const formData = {
+    const imprimirDatos = {
       nombre: nombre,
       email: email,
       comentarios:comentarios
     };
-    console.log(formData)
+    console.log(imprimirDatos)
     limpiarForm();
   };
 // función para limpar el formulario cada vez que se mandan los datos
