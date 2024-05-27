@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+// Llamar a useState en el nivel superior de nuestro componente para declarar una variable 
 import React, { useState } from 'react';
 
 
@@ -25,12 +26,11 @@ const App = () => {
 
   return (
     <>
-    {/* Importamos el Navbar */}
       <Navbar />
       <div className="container mt-3">
         <div className="row justify-content-center">
           <h2 className="text-center">Formulario</h2>
-          {/* Aquí empieza el formulario */}
+          {/* //Aquí empieza el formulario */}
           <form action="" id='Coment'>
           <div className="row justify-content-center">
           <div className="col-4">
