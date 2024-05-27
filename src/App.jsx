@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 
 
 const App = () => {
-
+// Parametros para obtener los datos 
   const [nombre, setNombre] = useState("")
   const [email, setEmail] = useState("")
   const [comentarios, setComentarios] = useState("")
-
+// función para enviar los datos con el botón 
   const send = () => {
     const formData = {
       nombre: nombre,
@@ -18,18 +18,19 @@ const App = () => {
     console.log(formData)
     limpiarForm();
   };
-
+// función para limpar el formulario cada vez que se mandan los datos
   const limpiarForm = () => {
     document.getElementById("Coment").reset();
   }
 
   return (
     <>
+    {/* Importamos el Navbar */}
       <Navbar />
       <div className="container mt-3">
         <div className="row justify-content-center">
           <h2 className="text-center">Formulario</h2>
-          
+          {/* Aquí empieza el formulario */}
           <form action="" id='Coment'>
           <div className="row justify-content-center">
           <div className="col-4">
@@ -71,6 +72,7 @@ const App = () => {
                 className="form-control"
                 id="comentarios"
                 rows="4"
+                // Se activa cuando se hace el cambio de dato insertado
                 onChange={(e) => setComentarios(e.target.value)}
               ></textarea>
             </div>
@@ -83,6 +85,7 @@ const App = () => {
             <button
               type="button"
               className="btn btn-primary w-100"
+              // Se dispara cuando se hace clic en el botón 
               onClick={send}>
               Publicar
             </button>
