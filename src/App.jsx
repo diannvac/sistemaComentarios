@@ -12,7 +12,7 @@ const App = () => {
 // función para enviar los datos con el botón 
   const send = () => {
     const imprimirDatos = {
-      //LLave:valor ESTO ES UN JSON
+      //LLave:valor ESTO ES UN JSON!
       nombre: nombre,
       email: email,
       comentarios:comentarios
