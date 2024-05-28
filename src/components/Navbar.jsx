@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const Navbar = () => {
   return (
+    // Aquí va el Navbar
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <a className="navbar-brand" href="#">Logo</a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"

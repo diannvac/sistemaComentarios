@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 // Llamar a useState en el nivel superior de nuestro componente para declarar una variable 
 import React, { useState } from 'react';
 
@@ -17,6 +18,7 @@ const App = () => {
       email: email,
       comentarios:comentarios
     };
+    //Imprimir 
     console.log(imprimirDatos)
     limpiarForm();
   };
@@ -92,6 +94,7 @@ const App = () => {
             </button>
           </div>
         </div>
+        <Footer />
       </div>
 
 
